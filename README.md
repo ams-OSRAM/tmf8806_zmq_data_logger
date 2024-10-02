@@ -13,7 +13,7 @@ To run these examples you must have a TMF8806 Raspberry Pi EVM connected.
 Or you can use a TMF8806 shield board with the matching ZeroMQ server. 
 You must have the zmq_client Python Package installed.
 
-![image](https://github.com/user-attachments/assets/f7ecd090-f0e8-4513-8718-5b9eb0c66b7b)
+![image](tmf8806_zeromq_logger_setup.png)
 
 Setup
 =====
@@ -27,3 +27,22 @@ Example (Powershell):
     > pip install zmq_client-1.1.9.tar.gz
     > python example_zmq_client.py
 ```
+
+Running the logger with a local ZeroMQ server
+=============================================
+
+If you want to log data from a ZeroMQ server running on your laptop (FTDI or Arduino setup) please change:
+
+```
+CMD_SERVER_ADDR = "tcp://169.254.0.2:5555"
+RESULT_SERVER_ADDR = "tcp://169.254.0.2:5556"
+```
+
+to
+
+```
+CMD_SERVER_ADDR = "tcp://127.0.0.1:5555"
+RESULT_SERVER_ADDR = "tcp://127.0.0.1:5556"
+```
+
+
