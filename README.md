@@ -24,7 +24,7 @@ Example (Powershell):
 ```
     > python -m venv .venv-test
     > ./.venv-test/Scripts/Activate.ps1
-    > pip install zmq_client-1.1.9.tar.gz
+    > pip install zmq_client-1.5.0.tar.gz
     > python example_zmq_client.py
 ```
 
